@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+page {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* Make EVERYTHING use border-box */
 
@@ -12,10 +16,10 @@ body {
 }
 
 header, section, nav, main, article {
-    display: block;              /* allekkain*/
     width: 100vw;
     padding: 15px;
     text-align: center;
+
 }
 
 nav {
@@ -49,4 +53,56 @@ article {
 
 .bg-purple {
     background-color: #C8C6FA;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+
+    
+    
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) { 
+    
+    page {
+        height: 100%;
+    }
+    
+    section,
+    .bg-yellow,
+    .bg-red,
+    .bg-purple{
+        width: 50%;
+
+  }
+    
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+    page {
+      /*  width: 960px; */
+        margin: 0 auto;
+    }
+    
+    .bg-yellow,
+    .bg-red,
+    .bg-purple {
+        width: 33.3%;
+    }
+    header {
+        height: 200px;
+    }
+    section {
+        
+        order: 1;
+    }
+    
+    main {
+        height: 200px;
+        order: 2;
+    }
+    
 }
